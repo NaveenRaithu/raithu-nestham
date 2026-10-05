@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raithu Nestham</title>
+<style>
+body{font-family:sans-serif;text-align:center;background:#e8f5e9;padding:20px}
+.card{background:white;padding:20px;border-radius:15px;margin:10px;box-shadow:0 2px 10px #ccc}
+button{background:#2e7d32;color:white;padding:15px 30px;border:none;border-radius:25px;font-size:18px;margin:10px}
+</style>
+</head>
+<body>
+<h1>Raithu Nestham</h1>
+<p>Telugu Voice Assistant for Farmers</p>
+<div class="card">
+<h3>Voice Adugu</h3>
+<button onclick="startVoice()">Matladu</button>
+<p id="result"></p>
+</div>
+<div class="card">
+<h3>Vatavaranam</h3>
+<button onclick="alert('Weather: Hyderabad - 32C Sunny')">Weather Chudu</button>
+</div>
+<div class="card">
+<h3>Market Dhara</h3>
+<button onclick="alert('Vari: 2100/q, Mirchi: 12000/q')">Dhara Chudu</button>
+</div>
+<script>
+function startVoice(){
+var r=new webkitSpeechRecognition();
+r.lang='te-IN';
+r.onresult=function(e){document.getElementById('result').innerText=e.results[0][0].transcript}
+r.start();
+}
+</script>
+</body>
+</html>
