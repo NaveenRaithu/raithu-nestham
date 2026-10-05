@@ -1,0 +1,27 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-IN": {
+          "name": "Raithu Nestham",
+          "description": "Telugu voice assistant for farmers - helps with crop advice, weather and market prices",
+          "summary": "Raithu Nestham",
+          "examplePhrases": [
+            "Alexa open Raithu Nestham",
+            "panta salaalu cheppu",
+            "weather enti"
+          ]
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:123456:function:raithu-nestham"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "2.0"
+  }
+}
